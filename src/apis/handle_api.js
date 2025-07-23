@@ -1,0 +1,65 @@
+import axios from "axios";
+import { CATEGORY_URL, ORDER_URL, URL, USER_URL } from "./api";
+
+export async function addProduct(product) {
+    try {
+      const res=await axios.post(URL,product)  
+      return res
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+export async function getProduct() {
+    try {
+      const res=await axios.get(URL)  
+      console.log(res);
+      return res.data
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+export async function deleteProduct(id) {
+  await axios.delete(`${URL}/${id}`)
+}
+
+export async function getOrders() {
+  try {
+    const res = await axios.get(ORDER_URL);
+    return res.data;
+  } catch (error) {
+    console.error("Error fetching orders:", error);
+    return [];
+  }
+}
+
+export const fetchUsers = async () => {
+  try {
+    const res = await axios.get(USER_URL);
+    console.log(res.data);
+    
+    return res.data;
+  } catch (err) {
+    console.error("Error fetching users:", err);
+    return [];
+  }
+};
+
+
+
+export const deleteCategory = async (id) => {
+  try {
+    await axios.delete(`${CATEGORY_URL}/${id}`);
+  } catch (err) {
+    console.error("Failed to delete category", err);
+  }
+};
+
+export  async function getCategories() {
+  const res = await axios.get(CATEGORY_URL);
+  return res.data;
+};
+
+
+
