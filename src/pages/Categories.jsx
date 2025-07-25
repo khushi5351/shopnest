@@ -20,7 +20,8 @@ async function handleDelete(id) {
   }
   return (
     <>
-    <h1>Categories</h1>
+    <div className="main">
+    <h1 style={{width:"74%"}}>Categories</h1>
    <div className="categories-container">
   {categories.map((c) => (
     <div className="category-card" key={c.id}>
@@ -31,6 +32,7 @@ async function handleDelete(id) {
       </div>
     </div>
   ))}
+</div>
 </div>
   </>
 

@@ -7,7 +7,7 @@ function Orders() {
 
   async function fetchOrders() {
       const res = await getOrders();
-      setOrders(res || []);
+      setOrders(res);
     }
 
     useEffect(() => {

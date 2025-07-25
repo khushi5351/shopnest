@@ -31,15 +31,6 @@ function Sidebar() {
       </Link>
 
 
-      <Link to="/reviews">
-        <i className="fas fa-star"></i> Reviews
-      </Link>
-
-      <Link to="/coupons">
-        <i className="fas fa-tags"></i> Coupons
-      </Link>
-
-
     </div>
   );
 }

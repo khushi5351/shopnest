@@ -20,11 +20,10 @@ async function getAllUsers() {
 
   return (
     <div className="users-page">
-      <h2>Users</h2>
+      <h2 style={{ width:" 79%"}}>users</h2>
         <table className="users-table">
           <thead>
             <tr>
-              <th>Profile</th>
               <th>Name</th>
               <th>Email</th>
               <th>Joined</th>
@@ -34,7 +33,6 @@ async function getAllUsers() {
           <tbody>
             {users.map((u) => (
               <tr key={u.id}>
-                <td>{u.image}</td>
                 <td>{u.name}</td>
                 <td>{u.email}</td>
                 <td>{u.createdAt}</td>

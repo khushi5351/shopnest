@@ -1,4 +1,13 @@
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -9,6 +18,7 @@
   height: 60px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: sticky;
+  width: 76%;
 }
 
 .navbar-left {

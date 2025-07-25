@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  position: absolute;
 }
 
 .sidebar h2 {

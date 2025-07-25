@@ -61,5 +61,32 @@ export  async function getCategories() {
   return res.data;
 };
 
+export async function addUser(user) {
+  try {
+    const res = await axios.post(`${USER_URL}`);
+    console.log(res);
+    alert("Register successfully");
+    return true;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+}
+export async function getUser(email, password) {
+  try {
+    const res = await axios.get(`${USER_URL}?email=${email}&password=${password}`);
 
-
+    if (res.data.length === 1) {
+      alert("Login successful");
+      sessionStorage.setItem("userId", res.data[0].id);
+      return res.data[0];
+    } else {
+      alert("Invalid email or password");
+      return null;
+    }
+  } catch (error) {
+    console.log("Login Error:", error);
+    alert("Server error");
+    return null;
+  }
+}
