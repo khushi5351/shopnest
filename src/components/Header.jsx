@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import SidebarMenu from "./SidebarMenu";
 import "./Header.css";
+// import logo from '../Assets/logo.jpg';
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -22,17 +23,17 @@ const Header = () => {
         />
 
         {/* Logo */}
-        <Link to="/" className="logo">
+        {/* <Link to="/" className="logo">
           ShopNest
-        </Link>
+        </Link> */}
+         <img src="C:\final_project_react\src\Assets\logo.jpg" alt="" style={{height:"20px",width:"50px"}}/>
 
         {/* Nav Links - shown on large screens only */}
-        <nav className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/products">Products</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
+        {/* <nav className="nav-links">
+          <Link to="/Home">Home</Link>
+          <Link to="/Product">Products</Link>
+          <Link to="/About">About</Link>
+        </nav> */}
 
         {/* Icons group */}
         <div className="nav-icons">

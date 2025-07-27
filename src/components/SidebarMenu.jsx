@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const SidebarMenu = ({ isSidebarOpen, setIsSidebarOpen }) => {
   return (
-    <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
-      <div className="sidebar-header">
+    <div className={`sidebaru ${isSidebarOpen ? "open" : ""}`}>
+      <div className="sidebaru-header">
         <h2>Menu</h2>
         <IoClose className="icon" onClick={() => setIsSidebarOpen(false)} />
       </div>

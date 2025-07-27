@@ -10,11 +10,20 @@ export async function addProduct(product) {
         
     }
 }
+export async function addCategory(category) {
+    try {
+      const res=await axios.post(CATEGORY_URL,category)  
+      return res
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
 export async function getProduct() {
     try {
       const res=await axios.get(URL)  
       console.log(res);
-      return res.data
+      return res
     } catch (error) {
         console.log(error);
         

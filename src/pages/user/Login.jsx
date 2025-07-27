@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import './Login.css';
+import './Login.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { getUser } from '../../apis/handle_api';
 
@@ -28,17 +28,15 @@ function Login() {
     }
     return (
         <div className="container">
-            <div className="top"></div>
-            <div className="bottom"></div>
             <div className="center">
-                <h2>Please Sign In</h2>
+                <h2>Welcome Back!Login Here.</h2>
                 <form onSubmit={submitLogin}>
                     <input type="email" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                     <input type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                     <button>Login</button>
-                    <NavLink to="/Register">Already a member?</NavLink>
-                    <h2>&nbsp;</h2>
                 </form>
+                    Don't Have An Account?
+                    <NavLink to="/Register">Register Now.</NavLink>
             </div>
         </div>
     );

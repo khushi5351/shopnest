@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  /* background-color: #f0f0f0; */
+}
+
+.centerr {
+  padding: 40px;
+  /* background-color: white; */
+  width: 400px;
+  text-align: center;
+}
+
+.centerr h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.centerr form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.centerr button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.centerr button:hover {
+  background-color: #555;
+}
+
+.centerr a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 14px;
+}
+
+.centerr a:hover {
+  text-decoration: underline;
+}

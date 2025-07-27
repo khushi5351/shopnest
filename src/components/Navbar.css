@@ -1,24 +1,24 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.nav{
+
+.nav {
   display: flex;
-  flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
-  /* background-color: #1f2937; dark background */
-  color: black;
   height: 60px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 95.6%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
-  width: 76%;
 }
 
 .navbar-left {
@@ -26,17 +26,42 @@
   font-weight: 500;
 }
 
-.logout-button {
-  background-color: #ef4444; /* red */
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
+.profile-container {
+  position: relative;
   cursor: pointer;
+}
+
+.profile-icon {
+  font-size: 24px;
+  color: #1f2937;
+}
+
+/* Dropdown menu shown only when state is true */
+.dropdown-menu {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.dropdown-item {
+  padding: 10px 16px;
   font-size: 14px;
+  color: #374151;
   transition: background 0.2s ease;
 }
 
-.logout-button:hover {
-  background-color: #dc2626;
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+.dropdown-item.logout {
+  color: #dc2626;
 }

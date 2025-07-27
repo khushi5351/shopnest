@@ -1,14 +1,18 @@
 import React from "react";
-import SocialMediaFooter from "./SocialMediaFooter";
+// import SocialMediaFooter from "./SocialMediaFooter";
 import "./Footer.css";
 import { HiChevronDown } from "react-icons/hi2";
 
 const Footer = () => {
   return (
     <>
-      <SocialMediaFooter />
+      {/* <SocialMediaFooter /> */}
       <footer className="footer">
+      {/* <footer className="about-footer">
+        &copy; 2025 ShopNest. All rights reserved.
+      </footer> */}
         <div className="footer-sections">
+          
           <div className="footer-column">
             <h3>Client Service</h3>
             <p>After-sale Service</p>
@@ -36,7 +40,7 @@ const Footer = () => {
             Worldwide / English <HiChevronDown />
           </p>
           <h2 className="footer-logo">ShopNest</h2>
-          <p className="rights-text">All rights reserved ©2024</p>
+          <p className="rights-text"> &copy; 2025 ShopNest. All rights reserved.</p>
           <ul className="footer-links">
             <li>Cookie Policy</li>
             <li>Privacy Policy</li>

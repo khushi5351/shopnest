@@ -15,9 +15,169 @@
       "desc": "u.s.polo tshirt",
       "price": "1800",
       "category": "Women's Clothing"
+    },
+    {
+      "id": "f735",
+      "name": "jeans",
+      "image": "https://levi.in/cdn/shop/files/ConvertOut-Resized-1-2-2.jpg?v=1709620045&width=1500",
+      "desc": "wide-leg jeans",
+      "price": "2000",
+      "category": "Women's Clothing"
+    },
+    {
+      "id": "faa7",
+      "name": "yash na shoes",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99120a42-1aba-4630-ab54-3362666e3714/W+NIKE+DUNK+LOW+NEXT+NATURE.png",
+      "desc": "wome's nike shoes",
+      "price": "5000",
+      "category": "Footwear"
+    },
+    {
+      "id": "a3d9",
+      "name": "tshirt",
+      "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
+      "desc": "u.s.polo tshirt",
+      "price": "1800",
+      "category": "Women's Clothing"
+    },
+    {
+      "id": "f736",
+      "name": "jeans",
+      "image": "https://levi.in/cdn/shop/files/ConvertOut-Resized-1-2-2.jpg?v=1709620045&width=1500",
+      "desc": "wide-leg jeans",
+      "price": "2000",
+      "category": "Women's Clothing"
+    },
+    {
+      "id": "a3d9",
+      "name": "tshirt",
+      "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
+      "desc": "u.s.polo tshirt",
+      "price": "1800",
+      "category": "Women's Clothing"
+    },
+    {
+      "id": "f736",
+      "name": "jeans",
+      "image": "https://levi.in/cdn/shop/files/ConvertOut-Resized-1-2-2.jpg?v=1709620045&width=1500",
+      "desc": "wide-leg jeans",
+      "price": "2000",
+      "category": "Women's Clothing"
+    },
+    {
+      "id": "a3d9",
+      "name": "tshirt",
+      "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
+      "desc": "u.s.polo tshirt",
+      "price": "1800",
+      "category": "Women's Clothing"
+    },
+    {
+      "id": "f736",
+      "name": "jeans",
+      "image": "https://levi.in/cdn/shop/files/ConvertOut-Resized-1-2-2.jpg?v=1709620045&width=1500",
+      "desc": "wide-leg jeans",
+      "price": "2000",
+      "category": "Women's Clothing"
     }
   ],
   "orders": [
+    {
+      "id": "ORD101",
+      "customerName": "Khushi Patel",
+      "name": "tshirt",
+      "total": 1200,
+      "status": "Delivered",
+      "date": "2025-07-20"
+    },
+    {
+      "id": "ORD102",
+      "customerName": "Ravi Mehta",
+      "name": "Watch",
+      "total": 1500,
+      "status": "Pending",
+      "date": "2025-07-21"
+    },
+    {
+      "id": "ORD103",
+      "customerName": "Aisha Khan",
+      "name": "Shoes",
+      "total": 2000,
+      "status": "Cancelled",
+      "date": "2025-07-19"
+    },
+    {
+      "id": "ORD101",
+      "customerName": "Khushi Patel",
+      "name": "tshirt",
+      "total": 1200,
+      "status": "Delivered",
+      "date": "2025-07-20"
+    },
+    {
+      "id": "ORD102",
+      "customerName": "Ravi Mehta",
+      "name": "Watch",
+      "total": 1500,
+      "status": "Pending",
+      "date": "2025-07-21"
+    },
+    {
+      "id": "ORD103",
+      "customerName": "Aisha Khan",
+      "name": "Shoes",
+      "total": 2000,
+      "status": "Cancelled",
+      "date": "2025-07-19"
+    },
+    {
+      "id": "ORD101",
+      "customerName": "Khushi Patel",
+      "name": "tshirt",
+      "total": 1200,
+      "status": "Delivered",
+      "date": "2025-07-20"
+    },
+    {
+      "id": "ORD102",
+      "customerName": "Ravi Mehta",
+      "name": "Watch",
+      "total": 1500,
+      "status": "Pending",
+      "date": "2025-07-21"
+    },
+    {
+      "id": "ORD103",
+      "customerName": "Aisha Khan",
+      "name": "Shoes",
+      "total": 2000,
+      "status": "Cancelled",
+      "date": "2025-07-19"
+    },
+    {
+      "id": "ORD101",
+      "customerName": "Khushi Patel",
+      "name": "tshirt",
+      "total": 1200,
+      "status": "Delivered",
+      "date": "2025-07-20"
+    },
+    {
+      "id": "ORD102",
+      "customerName": "Ravi Mehta",
+      "name": "Watch",
+      "total": 1500,
+      "status": "Pending",
+      "date": "2025-07-21"
+    },
+    {
+      "id": "ORD103",
+      "customerName": "Aisha Khan",
+      "name": "Shoes",
+      "total": 2000,
+      "status": "Cancelled",
+      "date": "2025-07-19"
+    },
     {
       "id": "ORD101",
       "customerName": "Khushi Patel",
@@ -48,14 +208,84 @@
       "id": "1",
       "name": "Khushi Patel",
       "email": "khushi@example.com",
-      "avatar": "https://img.freepik.com/premium-vector/silver-membership-icon-default-avatar-profile-icon-membership-icon-social-media-user-image-vector-illustration_561158-4195.jpg?semt=ais_hybrid&w=740",
       "createdAt": "2024-05-12"
     },
     {
       "id": "2",
       "name": "Jay Mehta",
       "email": "jay@example.com",
-      "avatar": "https://img.freepik.com/premium-vector/silver-membership-icon-default-avatar-profile-icon-membership-icon-social-media-user-image-vector-illustration_561158-4195.jpg?semt=ais_hybrid&w=740",
+      "createdAt": "2024-06-01"
+    },
+    {
+      "id": "1",
+      "name": "Khushi Patel",
+      "email": "khushi@example.com",
+      "createdAt": "2024-05-12"
+    },
+    {
+      "id": "2",
+      "name": "Jay Mehta",
+      "email": "jay@example.com",
+      "createdAt": "2024-06-01"
+    },
+    {
+      "id": "1",
+      "name": "Khushi Patel",
+      "email": "khushi@example.com",
+      "createdAt": "2024-05-12"
+    },
+    {
+      "id": "2",
+      "name": "Jay Mehta",
+      "email": "jay@example.com",
+      "createdAt": "2024-06-01"
+    },
+    {
+      "id": "1",
+      "name": "Khushi Patel",
+      "email": "khushi@example.com",
+      "createdAt": "2024-05-12"
+    },
+    {
+      "id": "2",
+      "name": "Jay Mehta",
+      "email": "jay@example.com",
+      "createdAt": "2024-06-01"
+    },
+    {
+      "id": "1",
+      "name": "Khushi Patel",
+      "email": "khushi@example.com",
+      "createdAt": "2024-05-12"
+    },
+    {
+      "id": "2",
+      "name": "Jay Mehta",
+      "email": "jay@example.com",
+      "createdAt": "2024-06-01"
+    },
+    {
+      "id": "1",
+      "name": "Khushi Patel",
+      "email": "khushi@example.com",
+      "createdAt": "2024-05-12"
+    },
+    {
+      "id": "2",
+      "name": "Jay Mehta",
+      "email": "jay@example.com",
+      "createdAt": "2024-06-01"
+    },
+    {
+      "id": "1",
+      "name": "Khushi Patel",
+      "email": "khushi@example.com",
+      "createdAt": "2024-05-12"
+    },
+    {
+      "id": "2",
+      "name": "Jay Mehta",
+      "email": "jay@example.com",
       "createdAt": "2024-06-01"
     }
   ],
@@ -79,6 +309,10 @@
     {
       "id": "5",
       "name": "Accessories"
+    },
+    {
+      "id": "8cf6",
+      "name": "khushi"
     }
   ]
 }

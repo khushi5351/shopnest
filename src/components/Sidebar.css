@@ -1,43 +1,82 @@
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
 .sidebar {
-  width: 250px;
+  width: 60px; /* collapsed width */
   height: 100vh;
   background-color: #1f2937; /* dark gray */
   color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 10px;
   position: absolute;
+  transition: width 0.3s ease;
+  overflow: hidden;
 }
 
+.sidebar:hover {
+  width: 250px; /* expanded width */
+}
 .sidebar h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 30px;
   text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
 }
+
+.sidebar:hover h2 {
+  opacity: 1;
+  visibility: visible;
+}
+/* .sidebar h2 {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+.sidebar:hover h2 {
+  height: auto;
+}
+ */
 
 .sidebar a {
   text-decoration: none;
   color: #ccc;
-  padding: 12px 15px;
+  padding: 12px;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
   border-radius: 6px;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
 }
 
 .sidebar a i {
   margin-right: 10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.sidebar a span {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  visibility: hidden;
+}
+
+.sidebar:hover a span {
+  opacity: 1;
+  visibility: visible;
 }
 
 .sidebar a:hover,
 .sidebar a.active {
-  background-color: #374151; /* lighter dark */
+  background-color: #374151;
   color: #fff;
 }
 
