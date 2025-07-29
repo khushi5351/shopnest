@@ -14,7 +14,7 @@ function Sidebar() {
         <i className="fas fa-plus-square"></i>
         <span>Add Product</span>
       </Link>
-      <Link to="/products">
+      <Link to="/Products">
         <i className="fas fa-box"></i>
         <span>Products</span>
       </Link>

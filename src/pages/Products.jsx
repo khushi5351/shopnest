@@ -31,7 +31,7 @@ function Products() {
 
   async function handleProduct() {
     const res = await getProduct();
-    setProduct(res);
+    setProduct(res.data);
   }
 
   useEffect(() => {
@@ -54,7 +54,7 @@ function Products() {
 
   return (
     <div className="products-page">
-      <div className="product-header">
+      <div className="product-header1">
         <h2>All Products</h2>
         <Link to="/addproduct" className="add-product-link">
           <button className="add-btn">

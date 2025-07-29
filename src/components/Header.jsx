@@ -18,15 +18,15 @@ const Header = () => {
       <header className="header">
         {/* Sidebar Toggle - only on small screens */}
         <HiBars3
-          className="menu-icon"
-          onClick={() => setIsSidebarOpen(true)}
+          className="menu-icon" style={{height:"30px",width:"30px"}}
+          onClick={() => setIsSidebarOpen(true) }
         />
 
         {/* Logo */}
         {/* <Link to="/" className="logo">
           ShopNest
         </Link> */}
-         <img src="C:\final_project_react\src\Assets\logo.jpg" alt="" style={{height:"20px",width:"50px"}}/>
+         <img src="https://github.com/khushi5351/shopnest/blob/main/src/Assets/logo.jpg?raw=true"  style={{height:"50px",width:"250px"}}/>
 
         {/* Nav Links - shown on large screens only */}
         {/* <nav className="nav-links">

@@ -1,61 +1,58 @@
 import { useEffect, useState } from "react";
-import "./Product.css";
-import { getProduct } from "../../apis/handle_api";
+import axios from "axios";
+import { URL } from "../../apis/api";
 import { useNavigate } from "react-router-dom";
 
-function Product() {
-    const [products, setProducts] = useState([]);
-    // const [sortOption, setSortOption] = useState("");
+function Accessories() {
+    const [Accessories, setAccessories] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const productsPerPage = 8;
-
-const navigate = useNavigate();
-    async function handleProducts() {
+    const navigate = useNavigate();
+    async function fetchMen() {
         try {
-            const res = await getProduct();
-            setProducts(res.data);
+            const res = await axios.get(`${URL}?category=Accessories`);
+            setAccessories(res.data);
         } catch (error) {
-            console.error(error);
+            console.error("Failed to fetch Accessories products:", error);
         }
     }
 
     useEffect(() => {
-        handleProducts();
+        fetchMen();
     }, []);
 
     // Pagination calculations
-    const totalPages = Math.ceil(products.length / productsPerPage);
+    const totalPages = Math.ceil(Accessories.length / productsPerPage);
     const indexOfLast = currentPage * productsPerPage;
     const indexOfFirst = indexOfLast - productsPerPage;
-    const currentProducts = products.slice(indexOfFirst, indexOfLast);
+    // const currentProducts = Accessories.slice(indexOfFirst, indexOfLast);
 
     const handlePageChange = (pageNum) => {
         setCurrentPage(pageNum);
     };
-
     return (
-        <div className="product-page1">
-            <div className="product-container1">
+        <>
+            <div className="product-page1">
                 <div className="product-header">
-                    <h2>Our Products</h2>
+                    <h2>Accessories</h2>
                 </div>
-               <div style={{ display: "flex", justifyContent: "end", width: "91%" }}>
-    <h5 style={{ marginTop: "-20px", padding: "5px" }}>Sort By:</h5>
-    <select
-      className="sort-dropdown"
-      onChange={(e) => navigate(e.target.value)}
-    >
-      <option value="/Product">Default</option>
-      <option value="/Men">Men's clothing</option>
-      <option value="/Women">Women's clothing</option>
-      <option value="/Footware">Footwear</option>
-      <option value="/Accessories">Accessories</option>
-      <option value="/Electronics">Electronics</option>
-    </select>
-  </div>
+                <div style={{ display: "flex", justifyContent: "end", width: "91%" }}>
+                    <h5 style={{ marginTop: "-20px", padding: "5px" }}>Sort By:</h5>
+                    <select
+                        className="sort-dropdown"
+                        onChange={(e) => navigate(e.target.value)}
+                    >
+                        <option value="/Product">Default</option>
+                        <option value="/Men">Men's clothing</option>
+                        <option value="/Women">Women's clothing</option>
+                        <option value="/Footware">Footwear</option>
+                        <option value="/Accessories">Accessories</option>
+                        <option value="/Electronics">Electronics</option>
+                    </select>
+                </div>
                 <div className="product-grid1">
-                    {Array.isArray(currentProducts) &&
-                        currentProducts.map((p, i) => (
+                    {Array.isArray(Accessories) &&
+                        Accessories.map((p, i) => (
                             <div className="product-card1" key={i}>
                                 <img src={p.image} alt={p.name} />
                                 <h3>{p.name}</h3>
@@ -65,7 +62,6 @@ const navigate = useNavigate();
                             </div>
                         ))}
                 </div>
-
                 {/* Pagination Controls */}
                 <div className="pagination">
                     {Array.from({ length: totalPages }, (_, i) => (
@@ -79,8 +75,8 @@ const navigate = useNavigate();
                     ))}
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
-export default Product;
+export default Accessories;

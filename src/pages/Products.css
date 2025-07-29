@@ -22,7 +22,7 @@
 }
 
 
-.product-header {
+.product-header1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +50,7 @@
   font-family: Arial, sans-serif;
 }
 
-.product-header {
+.product-header1 {
   display: flex;
   justify-content: space-between;
   align-items: center;

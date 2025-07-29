@@ -14,7 +14,7 @@
       "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
       "desc": "u.s.polo tshirt",
       "price": "1800",
-      "category": "Women's Clothing"
+      "category": "Men's Clothing"
     },
     {
       "id": "f735",
@@ -54,7 +54,7 @@
       "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
       "desc": "u.s.polo tshirt",
       "price": "1800",
-      "category": "Women's Clothing"
+      "category": "Electronics"
     },
     {
       "id": "f736",
@@ -62,7 +62,7 @@
       "image": "https://levi.in/cdn/shop/files/ConvertOut-Resized-1-2-2.jpg?v=1709620045&width=1500",
       "desc": "wide-leg jeans",
       "price": "2000",
-      "category": "Women's Clothing"
+      "category": "Accessories"
     },
     {
       "id": "a3d9",
@@ -309,10 +309,6 @@
     {
       "id": "5",
       "name": "Accessories"
-    },
-    {
-      "id": "8cf6",
-      "name": "khushi"
     }
   ]
 }
