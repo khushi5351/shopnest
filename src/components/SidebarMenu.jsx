@@ -10,7 +10,7 @@ const SidebarMenu = ({ isSidebarOpen, setIsSidebarOpen }) => {
         <IoClose className="icon" onClick={() => setIsSidebarOpen(false)} />
       </div>
       <nav>
-        <Link to="/Home" onClick={() => setIsSidebarOpen(false)}>Home</Link>
+        <Link to="/" onClick={() => setIsSidebarOpen(false)}>Home</Link>
         <Link to="/Product" onClick={() => setIsSidebarOpen(false)}>Products</Link>
         <Link to="/About" onClick={() => setIsSidebarOpen(false)}>About</Link>
         {/* <Link to="/contact" onClick={() => setIsSidebarOpen(false)}>Contact</Link> */}

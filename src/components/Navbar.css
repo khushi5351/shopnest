@@ -5,6 +5,7 @@
 }
 
 .nav {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -65,3 +66,24 @@
 .dropdown-item.logout {
   color: #dc2626;
 }
+@media (max-width:1025px) {
+  .navbar{
+    width: 93.8%;
+  }
+}
+@media (max-width:769px) {
+.navbar{
+  width: 92%;
+}
+}
+@media (max-width:426px) {
+.navbar{
+  width: 85%;
+}
+}
+@media (max-width:376px) {
+.navbar{
+  width: 79%;
+}
+}
+

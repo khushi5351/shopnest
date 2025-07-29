@@ -26,7 +26,7 @@ const Header = () => {
         {/* <Link to="/" className="logo">
           ShopNest
         </Link> */}
-         <img src="https://github.com/khushi5351/shopnest/blob/main/src/Assets/logo.jpg?raw=true"  style={{height:"50px",width:"250px"}}/>
+         <img src="https://github.com/khushi5351/shopnest/blob/main/src/Assets/logo.jpg?raw=true"  />
 
         {/* Nav Links - shown on large screens only */}
         {/* <nav className="nav-links">
@@ -40,10 +40,10 @@ const Header = () => {
           <Link to="/search">
             <HiOutlineMagnifyingGlass className="icon" />
           </Link>
-          <Link to="/login">
+          <Link to="/Login">
             <HiOutlineUser className="icon" />
           </Link>
-          <Link to="/cart">
+          <Link to="/Cart">
             <HiOutlineShoppingBag className="icon" />
           </Link>
         </div>

@@ -25,7 +25,7 @@ function Orders() {
       <h2>All Orders</h2>
 
       <div className="orders-table-container">
-        <table className="orders-table">
+        <table border="1px solid gray" className="orders-table">
           <thead>
             <tr>
               <th>Order ID</th>
@@ -34,7 +34,7 @@ function Orders() {
               <th>Total</th>
               <th>Status</th>
               <th>Date</th>
-              <th>Actions</th>
+              {/* <th>Actions</th> */}
             </tr>
           </thead>
           <tbody>
@@ -46,10 +46,10 @@ function Orders() {
                 <td>₹{order.total}</td>
                 <td>{order.status}</td>
                 <td>{order.date}</td>
-                <td>
+                {/* <td>
                   <button className="view-btn">View</button>
                   <button className="cancel-btn">Cancel</button>
-                </td>
+                </td> */}
               </tr>
             ))}
           </tbody>

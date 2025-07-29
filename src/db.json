@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": "faa6",
+      "id": "prod1",
       "name": "yash na shoes",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99120a42-1aba-4630-ab54-3362666e3714/W+NIKE+DUNK+LOW+NEXT+NATURE.png",
       "desc": "wome's nike shoes",
@@ -9,7 +9,7 @@
       "category": "Footwear"
     },
     {
-      "id": "a3d8",
+      "id": "prod2",
       "name": "tshirt",
       "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
       "desc": "u.s.polo tshirt",
@@ -17,7 +17,7 @@
       "category": "Men's Clothing"
     },
     {
-      "id": "f735",
+      "id": "prod3",
       "name": "jeans",
       "image": "https://levi.in/cdn/shop/files/ConvertOut-Resized-1-2-2.jpg?v=1709620045&width=1500",
       "desc": "wide-leg jeans",
@@ -25,7 +25,7 @@
       "category": "Women's Clothing"
     },
     {
-      "id": "faa7",
+      "id": "prod4",
       "name": "yash na shoes",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99120a42-1aba-4630-ab54-3362666e3714/W+NIKE+DUNK+LOW+NEXT+NATURE.png",
       "desc": "wome's nike shoes",
@@ -33,7 +33,7 @@
       "category": "Footwear"
     },
     {
-      "id": "a3d9",
+      "id": "prod5",
       "name": "tshirt",
       "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
       "desc": "u.s.polo tshirt",
@@ -41,7 +41,7 @@
       "category": "Women's Clothing"
     },
     {
-      "id": "f736",
+      "id": "prod6",
       "name": "jeans",
       "image": "https://levi.in/cdn/shop/files/ConvertOut-Resized-1-2-2.jpg?v=1709620045&width=1500",
       "desc": "wide-leg jeans",
@@ -49,7 +49,7 @@
       "category": "Women's Clothing"
     },
     {
-      "id": "a3d9",
+      "id": "prod7",
       "name": "tshirt",
       "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
       "desc": "u.s.polo tshirt",
@@ -57,7 +57,7 @@
       "category": "Electronics"
     },
     {
-      "id": "f736",
+      "id": "prod8",
       "name": "jeans",
       "image": "https://levi.in/cdn/shop/files/ConvertOut-Resized-1-2-2.jpg?v=1709620045&width=1500",
       "desc": "wide-leg jeans",
@@ -65,7 +65,7 @@
       "category": "Accessories"
     },
     {
-      "id": "a3d9",
+      "id": "prod9",
       "name": "tshirt",
       "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
       "desc": "u.s.polo tshirt",
@@ -73,7 +73,7 @@
       "category": "Women's Clothing"
     },
     {
-      "id": "f736",
+      "id": "prod10",
       "name": "jeans",
       "image": "https://levi.in/cdn/shop/files/ConvertOut-Resized-1-2-2.jpg?v=1709620045&width=1500",
       "desc": "wide-leg jeans",
@@ -107,207 +107,67 @@
       "date": "2025-07-19"
     },
     {
-      "id": "ORD101",
-      "customerName": "Khushi Patel",
-      "name": "tshirt",
-      "total": 1200,
+      "id": "ORD104",
+      "customerName": "Meera Shah",
+      "name": "Bag",
+      "total": 2200,
       "status": "Delivered",
-      "date": "2025-07-20"
+      "date": "2025-07-18"
     },
     {
-      "id": "ORD102",
-      "customerName": "Ravi Mehta",
-      "name": "Watch",
-      "total": 1500,
+      "id": "ORD105",
+      "customerName": "Rahul Desai",
+      "name": "Headphones",
+      "total": 3000,
       "status": "Pending",
-      "date": "2025-07-21"
-    },
-    {
-      "id": "ORD103",
-      "customerName": "Aisha Khan",
-      "name": "Shoes",
-      "total": 2000,
-      "status": "Cancelled",
-      "date": "2025-07-19"
-    },
-    {
-      "id": "ORD101",
-      "customerName": "Khushi Patel",
-      "name": "tshirt",
-      "total": 1200,
-      "status": "Delivered",
-      "date": "2025-07-20"
-    },
-    {
-      "id": "ORD102",
-      "customerName": "Ravi Mehta",
-      "name": "Watch",
-      "total": 1500,
-      "status": "Pending",
-      "date": "2025-07-21"
-    },
-    {
-      "id": "ORD103",
-      "customerName": "Aisha Khan",
-      "name": "Shoes",
-      "total": 2000,
-      "status": "Cancelled",
-      "date": "2025-07-19"
-    },
-    {
-      "id": "ORD101",
-      "customerName": "Khushi Patel",
-      "name": "tshirt",
-      "total": 1200,
-      "status": "Delivered",
-      "date": "2025-07-20"
-    },
-    {
-      "id": "ORD102",
-      "customerName": "Ravi Mehta",
-      "name": "Watch",
-      "total": 1500,
-      "status": "Pending",
-      "date": "2025-07-21"
-    },
-    {
-      "id": "ORD103",
-      "customerName": "Aisha Khan",
-      "name": "Shoes",
-      "total": 2000,
-      "status": "Cancelled",
-      "date": "2025-07-19"
-    },
-    {
-      "id": "ORD101",
-      "customerName": "Khushi Patel",
-      "name": "tshirt",
-      "total": 1200,
-      "status": "Delivered",
-      "date": "2025-07-20"
-    },
-    {
-      "id": "ORD102",
-      "customerName": "Ravi Mehta",
-      "name": "Watch",
-      "total": 1500,
-      "status": "Pending",
-      "date": "2025-07-21"
-    },
-    {
-      "id": "ORD103",
-      "customerName": "Aisha Khan",
-      "name": "Shoes",
-      "total": 2000,
-      "status": "Cancelled",
-      "date": "2025-07-19"
+      "date": "2025-07-22"
     }
   ],
   "users": [
     {
-      "id": "1",
+      "id": "user1",
       "name": "Khushi Patel",
       "email": "khushi@example.com",
       "createdAt": "2024-05-12"
     },
     {
-      "id": "2",
+      "id": "user2",
       "name": "Jay Mehta",
       "email": "jay@example.com",
       "createdAt": "2024-06-01"
     },
     {
-      "id": "1",
-      "name": "Khushi Patel",
-      "email": "khushi@example.com",
-      "createdAt": "2024-05-12"
+      "id": "user3",
+      "name": "Aisha Khan",
+      "email": "aisha@example.com",
+      "createdAt": "2024-06-05"
     },
     {
-      "id": "2",
-      "name": "Jay Mehta",
-      "email": "jay@example.com",
-      "createdAt": "2024-06-01"
-    },
-    {
-      "id": "1",
-      "name": "Khushi Patel",
-      "email": "khushi@example.com",
-      "createdAt": "2024-05-12"
-    },
-    {
-      "id": "2",
-      "name": "Jay Mehta",
-      "email": "jay@example.com",
-      "createdAt": "2024-06-01"
-    },
-    {
-      "id": "1",
-      "name": "Khushi Patel",
-      "email": "khushi@example.com",
-      "createdAt": "2024-05-12"
-    },
-    {
-      "id": "2",
-      "name": "Jay Mehta",
-      "email": "jay@example.com",
-      "createdAt": "2024-06-01"
-    },
-    {
-      "id": "1",
-      "name": "Khushi Patel",
-      "email": "khushi@example.com",
-      "createdAt": "2024-05-12"
-    },
-    {
-      "id": "2",
-      "name": "Jay Mehta",
-      "email": "jay@example.com",
-      "createdAt": "2024-06-01"
-    },
-    {
-      "id": "1",
-      "name": "Khushi Patel",
-      "email": "khushi@example.com",
-      "createdAt": "2024-05-12"
-    },
-    {
-      "id": "2",
-      "name": "Jay Mehta",
-      "email": "jay@example.com",
-      "createdAt": "2024-06-01"
-    },
-    {
-      "id": "1",
-      "name": "Khushi Patel",
-      "email": "khushi@example.com",
-      "createdAt": "2024-05-12"
-    },
-    {
-      "id": "2",
-      "name": "Jay Mehta",
-      "email": "jay@example.com",
-      "createdAt": "2024-06-01"
+      "id": "user4",
+      "name": "Ravi Mehta",
+      "email": "ravi@example.com",
+      "createdAt": "2024-06-10"
     }
   ],
   "categories": [
     {
-      "id": "1",
+      "id": "cat1",
       "name": "Men's Clothing"
     },
     {
-      "id": "2",
+      "id": "cat2",
       "name": "Women's Clothing"
     },
     {
-      "id": "3",
+      "id": "cat3",
       "name": "Electronics"
     },
     {
-      "id": "4",
+      "id": "cat4",
       "name": "Footwear"
     },
     {
-      "id": "5",
+      "id": "cat5",
       "name": "Accessories"
     }
   ]

@@ -76,3 +76,24 @@
 .product-form button:hover {
   background-color: #2563eb;
 }
+
+@media (max-width:426px){
+  .product-form{
+    width: 330px;
+  }
+  .add-product-container{
+    align-items: end;
+  }
+  .add-product-container h2{
+    width: 330px;
+  }
+}
+@media (max-width:426px){
+  .product-form{
+    width: 281px;
+  }
+  .add-product-container h2{
+    width: 281px;
+  }
+
+}

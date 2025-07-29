@@ -23,6 +23,7 @@ import Women from './pages/user/Women.jsx';
 import Accessories from './pages/user/Accessories.jsx';
 import Electronics from './pages/user/Electronics.jsx';
 import Footware from './pages/user/Footware.jsx';
+import Cart from './pages/user/Cart.jsx';
 // import Coupons from './pages/Coupons.jsx';
 // import Reviews from './pages/Reviews.jsx';
 
@@ -36,13 +37,14 @@ function App() {
               <Route path="/Login" element={<><Header/><Login/><Footer/></>} />
               <Route path="/Register" element={<><Header/><Register/><Footer/></>} />
               <Route path="/Product" element={<><Header/><Product/><Footer/></>} />
-              <Route path="/Home" element={<><Header/><Home/><Footer/></>} />
+              <Route path="/" element={<><Header/><Home/><Footer/></>} />
               <Route path="/About" element={<><Header/><About/><Footer/></>} />
               <Route path="/Men" element={<><Header/><Men/><Footer/></>} />
               <Route path="/Women" element={<><Header/><Women/><Footer/></>} />
               <Route path="/Accessories" element={<><Header/><Accessories/><Footer/></>} />
               <Route path="/Electronics" element={<><Header/><Electronics/><Footer/></>} />
               <Route path="/Footware" element={<><Header/><Footware/><Footer/></>} />
+              <Route path="/Cart" element={<><Header/><Cart/><Footer/></>} />
               <Route path="/Dashboard" element={<><Sidebar /> <Navbar /><Dashboard /></>} />
               <Route path="/Addproduct" element={<><Sidebar /> <Navbar /><Addproduct /></>} />
               <Route path="/Products" element={<><Sidebar /> <Navbar /><Products /></>} />

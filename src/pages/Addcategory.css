@@ -1,5 +1,5 @@
 .add-category-container {
-  max-width: 400px;
+  width: 400px;
   margin: 50px auto;
   background-color: #f9fafb;
   padding: 30px;
@@ -45,4 +45,11 @@
 
 .category-form button:hover {
   background-color: #2563eb;
+}
+
+@media (max-width:426px){
+  .add-category-container{
+   width: 330px;
+   margin-left: 79px;
+  }
 }

@@ -32,7 +32,10 @@
   text-decoration: none;
   color: black;
 }
-
+ .header img{
+    width: 250px;
+    height: 50px;
+  }
 /* Navigation Links */
 .nav-links {
   display: flex;
@@ -102,12 +105,30 @@
   .logo {
     font-size: 1.75rem;
   }
-
+  
   .nav-icons {
     gap: 10px;
   }
-
+  
   .icon {
     font-size: 16px;
+  }
+}
+@media (max-width: 426px) {
+  .hero-content h1{
+    font-size: medium;
+  }
+  .hero-content p{
+font-size: small;
+  }
+  .hero-content button{
+    height: 32px;
+    width: 131px;
+    font-size: x-small;
+  }
+}
+@media (max-width: 321px) {
+  .header img{
+    width: 182px;
   }
 }

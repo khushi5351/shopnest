@@ -5,12 +5,12 @@ import "./Home.css";
 // import heroImage from "src/Assets/banner1.jpg"; // place image in src/assets
 import banner1 from '../../Assets/banner1.jpg';
 
-const HomePage = () => {
+function HomePage () {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/products")
+.get("http://localhost:3000/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -34,17 +34,6 @@ const HomePage = () => {
           <button style={{backgroundColor:"transparent",border:"1px solid white"}}>See Collections</button>
         </div>
       </header>
-
-      {/* <section className="category-section">
-        <h2>Shop by Category</h2> */}
-        {/* Replace categories array and images with your own */}
-        {/* {["Men's Clothing", "Women's Clothing", "Electronics", "Footwear","Accessories"].map((cat) => (
-          <div key={cat} className="category-card">
-            <img src={`/categories/${cat.toLowerCase()}.jpg`} alt={cat} />
-            <p>{cat}</p>
-          </div>
-        ))}
-      </section> */}
 
       <section className="featured-products">
         <h2>Featured Products</h2>
