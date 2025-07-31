@@ -14,7 +14,7 @@ function Login() {
         e.preventDefault()
         const res = await getUser(email, password)
         if(res){
-            navigate("/Home");
+            navigate("/");
 
         }
         else{

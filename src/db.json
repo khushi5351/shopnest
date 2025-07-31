@@ -1,20 +1,20 @@
 {
   "products": [
     {
-      "id": "prod1",
-      "name": "yash na shoes",
+      "name": " shoes",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99120a42-1aba-4630-ab54-3362666e3714/W+NIKE+DUNK+LOW+NEXT+NATURE.png",
       "desc": "wome's nike shoes",
       "price": "5000",
-      "category": "Footwear"
+      "category": "Electronics",
+      "id": "prod1"
     },
     {
-      "id": "prod2",
       "name": "tshirt",
       "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
       "desc": "u.s.polo tshirt",
       "price": "1800",
-      "category": "Men's Clothing"
+      "category": "Women's Clothing",
+      "id": "prod2"
     },
     {
       "id": "prod3",
@@ -49,20 +49,12 @@
       "category": "Women's Clothing"
     },
     {
-      "id": "prod7",
       "name": "tshirt",
-      "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Tlxsf2mciBIrqa_lytLSZxSP-tUCv08Ebw&s",
       "desc": "u.s.polo tshirt",
       "price": "1800",
-      "category": "Electronics"
-    },
-    {
-      "id": "prod8",
-      "name": "jeans",
-      "image": "https://levi.in/cdn/shop/files/ConvertOut-Resized-1-2-2.jpg?v=1709620045&width=1500",
-      "desc": "wide-leg jeans",
-      "price": "2000",
-      "category": "Accessories"
+      "category": "Women's Clothing",
+      "id": "prod7"
     },
     {
       "id": "prod9",
@@ -83,44 +75,64 @@
   ],
   "orders": [
     {
-      "id": "ORD101",
-      "customerName": "Khushi Patel",
-      "name": "tshirt",
-      "total": 1200,
-      "status": "Delivered",
-      "date": "2025-07-20"
+      "id": "f04b",
+      "cart": [
+        {
+          "name": " shoes",
+          "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99120a42-1aba-4630-ab54-3362666e3714/W+NIKE+DUNK+LOW+NEXT+NATURE.png",
+          "desc": "wome's nike shoes",
+          "price": "5000",
+          "category": "Electronics",
+          "id": "prod1",
+          "quantity": 1
+        }
+      ]
     },
     {
-      "id": "ORD102",
-      "customerName": "Ravi Mehta",
-      "name": "Watch",
-      "total": 1500,
-      "status": "Pending",
-      "date": "2025-07-21"
+      "id": "c876",
+      "cart": [
+        {
+          "name": "tshirt",
+          "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/30386042/2024/8/13/133a83bd-0665-40ad-b908-f713d71e62151723534855264-US-Polo-Assn-Women-Solid-Brand-Logo-Embroidered-Jacquard-Col-1.jpg",
+          "desc": "u.s.polo tshirt",
+          "price": "1800",
+          "category": "Women's Clothing",
+          "id": "prod2",
+          "quantity": 1
+        }
+      ]
     },
     {
-      "id": "ORD103",
-      "customerName": "Aisha Khan",
-      "name": "Shoes",
-      "total": 2000,
-      "status": "Cancelled",
-      "date": "2025-07-19"
-    },
-    {
-      "id": "ORD104",
-      "customerName": "Meera Shah",
-      "name": "Bag",
-      "total": 2200,
-      "status": "Delivered",
-      "date": "2025-07-18"
-    },
-    {
-      "id": "ORD105",
-      "customerName": "Rahul Desai",
-      "name": "Headphones",
-      "total": 3000,
-      "status": "Pending",
-      "date": "2025-07-22"
+      "id": "bbf3",
+      "cart": [
+        {
+          "name": " shoes",
+          "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99120a42-1aba-4630-ab54-3362666e3714/W+NIKE+DUNK+LOW+NEXT+NATURE.png",
+          "desc": "wome's nike shoes",
+          "price": "5000",
+          "category": "Electronics",
+          "id": "prod1",
+          "quantity": 1
+        },
+        {
+          "name": "tshirt",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Tlxsf2mciBIrqa_lytLSZxSP-tUCv08Ebw&s",
+          "desc": "u.s.polo tshirt",
+          "price": "1800",
+          "category": "Women's Clothing",
+          "id": "prod7",
+          "quantity": 1
+        },
+        {
+          "id": "prod3",
+          "name": "jeans",
+          "image": "https://levi.in/cdn/shop/files/ConvertOut-Resized-1-2-2.jpg?v=1709620045&width=1500",
+          "desc": "wide-leg jeans",
+          "price": "2000",
+          "category": "Women's Clothing",
+          "quantity": 2
+        }
+      ]
     }
   ],
   "users": [
@@ -147,13 +159,12 @@
       "name": "Ravi Mehta",
       "email": "ravi@example.com",
       "createdAt": "2024-06-10"
+    },
+    {
+      "id": "0e52"
     }
   ],
   "categories": [
-    {
-      "id": "cat1",
-      "name": "Men's Clothing"
-    },
     {
       "id": "cat2",
       "name": "Women's Clothing"
@@ -169,6 +180,10 @@
     {
       "id": "cat5",
       "name": "Accessories"
+    },
+    {
+      "name": "Men's Clothing",
+      "id": "b134"
     }
   ]
 }

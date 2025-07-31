@@ -2,41 +2,88 @@ import './Dashboard.css';
 import axios from 'axios';
 import { ORDER_URL, URL, USER_URL } from '../apis/api';
 import { useEffect, useState } from 'react';
+import {
+  Bar,
+  Line
+} from 'react-chartjs-2';
 
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  LineElement,
+  PointElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  LineElement,
+  PointElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 function Dashboard() {
   const [users, setUsers] = useState([]);
   const [orders, setOrders] = useState([]);
   const [products, setProducts] = useState([]);
-  const [sales, setSales] = useState([]);
+  const [sales, setSales] = useState(0);
+
   const fetchUsers = async () => {
     try {
       const res = await axios.get(USER_URL);
       setUsers(res.data);
+
       const res1 = await axios.get(ORDER_URL);
       setOrders(res1.data);
+
       const res2 = await axios.get(URL);
       setProducts(res2.data);
-      let total = 0;
 
-      for (let i = 0; i < res1.data.length; i++) {
-        total += res1.data[i].total
-        console.log(total);
-      }
-      setSales(total)
+      const totalSales = res1.data.reduce((acc, order) => acc + order.total, 0);
+      setSales(totalSales);
     } catch (error) {
-      console.error("Error fetching users:", error);
+      console.error("Error fetching data:", error);
     }
   };
 
-
-
-
-
   useEffect(() => {
     fetchUsers();
-
   }, []);
+
+  // Dummy sales chart data
+  const salesChartData = {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    datasets: [
+      {
+        label: 'Sales in ₹',
+        data: [5000, 7000, 6000, 9000, 11000, 9500],
+        borderColor: 'rgba(75,192,192,1)',
+        backgroundColor: 'rgba(75,192,192,0.2)',
+        tension: 0.4,
+        filler: true,
+      },
+    ],
+  };
+
+  // Dummy top products bar chart
+  const topProductsData = {
+    labels: ['Shirt', 'Shoes', 'Headset'],
+    datasets: [
+      {
+        label: 'Units Sold',
+        data: [580, 510, 430],
+        backgroundColor: ['#3f51b5', '#009688', '#f44336'],
+      },
+    ],
+  };
 
   return (
     <div className="dashboard-container">
@@ -61,25 +108,12 @@ function Dashboard() {
 
       <div className="section">
         <h2>Monthly Sales Chart</h2>
-        <div className="chart-placeholder">[ Sales Chart Placeholder ]</div>
+        <Line data={salesChartData} />
       </div>
 
       <div className="section">
         <h2>Top Selling Products</h2>
-        <div className="bar-chart">
-          <div>
-            <div className="bar" >580</div>
-            <div className="bar-label">👕 Shirt</div>
-          </div>
-          <div>
-            <div className="bar1" >510</div>
-            <div className="bar-label">👟 Shoes</div>
-          </div>
-          <div>
-            <div className="bar2" >430</div>
-            <div className="bar-label">🎧 Headset</div>
-          </div>
-        </div>
+        <Bar data={topProductsData} />
       </div>
 
       <div className="section recent-orders">

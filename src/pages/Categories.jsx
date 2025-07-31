@@ -1,11 +1,29 @@
 import { useEffect, useState } from "react";
-import { deleteCategory, getCategories } from "../apis/handle_api";
+import { deleteCategory, getCategories, updateCategory } from "../apis/handle_api";
 import "./Categories.css";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+
+const modalStyle = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
 function Categories() {
   const [categories, setCategories] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
+
+  const [open, setOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [editedName, setEditedName] = useState("");
 
   const fetchCategories = async () => {
     const res = await getCategories();
@@ -18,6 +36,24 @@ function Categories() {
 
   const handleDelete = async (id) => {
     await deleteCategory(id);
+    fetchCategories();
+  };
+
+  const handleEditOpen = (category) => {
+    setSelectedCategory(category);
+    setEditedName(category.name);
+    setOpen(true);
+  };
+
+  const handleEditClose = () => {
+    setOpen(false);
+    setSelectedCategory(null);
+  };
+
+  const handleUpdateCategory = async (e) => {
+    e.preventDefault();
+    await updateCategory(selectedCategory.id, { name: editedName });
+    handleEditClose();
     fetchCategories();
   };
 
@@ -38,8 +74,12 @@ function Categories() {
             <div className="category-card" key={c.id}>
               <div className="category-name">{c.name}</div>
               <div className="category-buttons">
-                <button className="edit-btn">Edit</button>
-                <button className="delete-btn" onClick={() => handleDelete(c.id)}>Delete</button>
+                <button className="edit-btn" onClick={() => handleEditOpen(c)}>
+                  Edit
+                </button>
+                <button className="delete-btn" onClick={() => handleDelete(c.id)}>
+                  Delete
+                </button>
               </div>
             </div>
           ))}
@@ -58,6 +98,28 @@ function Categories() {
           ))}
         </div>
       </div>
+
+      {/* Edit Category Modal */}
+      <Modal
+        open={open}
+        onClose={handleEditClose}
+        aria-labelledby="edit-category-modal"
+        aria-describedby="edit-category-form"
+      >
+        <Box sx={modalStyle}>
+          <h2>Edit Category</h2>
+          <form onSubmit={handleUpdateCategory} className="category-form">
+            <label>Category Name</label>
+            <input
+              type="text"
+              value={editedName}
+              onChange={(e) => setEditedName(e.target.value)}
+              required
+            />
+            <button type="submit">Update Category</button>
+          </form>
+        </Box>
+      </Modal>
     </>
   );
 }

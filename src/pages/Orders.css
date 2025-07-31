@@ -76,12 +76,17 @@ h2 {
   color: white;
   border-color: #4f46e5;
 }
-
-@media (max-width:426px){
- .orders-table-container {
-  max-height: 450px;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+@media screen and (max-width: 426px) {
+  /* styles */
+  .orders-table-container {
+   max-height: 450px;
+   overflow-y: auto;
+   border: 1px solid #ccc;
+   border-radius: 6px;
+  }
 }
+
+
+@media screen {
+  
 }

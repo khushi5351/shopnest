@@ -99,3 +99,20 @@ export async function getUser(email, password) {
     return null;
   }
 }
+// import axios from 'axios';
+
+export const updateProduct = (id, data) => axios.put(`${URL}/${id}`, data);
+
+export const updateCategory = (id, data) => {
+  return axios.put(`${CATEGORY_URL}/${id}`, data);
+};
+
+export async function placeOrderrr (order) {
+  try {
+    const res=await axios.post(ORDER_URL,order)
+    return res
+  } catch (error) {
+    console.log(error);
+    
+  }
+}

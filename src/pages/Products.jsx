@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
-import { getProduct, deleteProduct } from "../apis/handle_api";
+import { getProduct, deleteProduct, updateProduct, getCategories } from "../apis/handle_api";
 import { Link } from "react-router-dom";
 import "./Products.css";
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import Addproduct from "./Addproduct";
 
-const style = {
+const modalStyle = {
   position: 'absolute',
   top: '50%',
   left: '50%',
@@ -21,32 +19,76 @@ const style = {
 };
 
 function Products() {
-  const [product, setProduct] = useState([]);
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [products, setProducts] = useState([]);
+  const [open, setOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const [name, setName] = useState("");
+  const [image, setImage] = useState("");
+  const [desc, setDesc] = useState("");
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("");
+  const [categories, setCategories] = useState([
+  ]); // You can fetch from an API if needed
 
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 8;
 
-  async function handleProduct() {
+  const fetchProducts = async () => {
     const res = await getProduct();
-    setProduct(res.data);
-  }
+    setProducts(res.data);
+  };
 
+   const fetchCategories = async () => {
+      const res = await getCategories();
+      setCategories(res);
+    };
   useEffect(() => {
-    handleProduct();
+    fetchProducts();
+    fetchCategories()
   }, []);
 
-  async function handleDelete(id) {
+  const handleDelete = async (id) => {
     await deleteProduct(id);
-    handleProduct();
-  }
+    fetchProducts();
+  };
 
-  // Pagination logic
-  const totalPages = Math.ceil(product.length / productsPerPage);
-  const startIndex = (currentPage - 1) * productsPerPage;
-  const currentProducts = product.slice(startIndex, startIndex + productsPerPage);
+  const handleOpen = (product) => {
+    setSelectedProduct(product);
+    setName(product.name);
+    setImage(product.image);
+    setDesc(product.desc);
+    setPrice(product.price);
+    setCategory(product.category);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedProduct(null);
+  };
+
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+    const updatedProduct = {
+      name,
+      image,
+      desc,
+      price,
+      category,
+    };
+
+    await updateProduct(selectedProduct.id, updatedProduct);
+    handleClose();
+    fetchProducts();
+  };
+
+  // Pagination
+  const totalPages = Math.ceil(products.length / productsPerPage);
+  const currentProducts = products.slice(
+    (currentPage - 1) * productsPerPage,
+    currentPage * productsPerPage
+  );
 
   const handlePageChange = (pageNum) => {
     setCurrentPage(pageNum);
@@ -65,44 +107,66 @@ function Products() {
 
       <div className="product-grid">
         {currentProducts.map((p, i) => (
-          <div className="product-card" key={i}>
+          <div className="product-card" key={p.id}>
             <img src={p.image} alt={p.name} />
             <h3>{p.name}</h3>
             <p>{p.desc}</p>
             <p className="price">₹{p.price}</p>
             <div className="card-buttons">
-              <button className="update-btn" onClick={handleOpen}>Update</button>
-              <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-              >
-                <Box sx={style}>
-                  <Typography id="modal-modal-title" variant="h6" component="h2">
-                    <Addproduct />
-                  </Typography>
-                </Box>
-              </Modal>
-
+              <button className="update-btn" onClick={() => handleOpen(p)}>Update</button>
               <button className="delete-btn" onClick={() => handleDelete(p.id)}>Delete</button>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Pagination Buttons */}
+      {/* Pagination */}
       <div className="pagination">
-        {Array.from({ length: totalPages }, (_, index) => (
+        {Array.from({ length: totalPages }, (_, idx) => (
           <button
-            key={index}
-            onClick={() => handlePageChange(index + 1)}
-            className={currentPage === index + 1 ? "active-page" : ""}
+            key={idx}
+            onClick={() => handlePageChange(idx + 1)}
+            className={currentPage === idx + 1 ? "active-page" : ""}
           >
-            {index + 1}
+            {idx + 1}
           </button>
         ))}
       </div>
+
+      {/* Update Modal */}
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="update-modal-title"
+        aria-describedby="update-modal-description"
+      >
+        <Box sx={modalStyle}>
+          <h2>Update Product</h2>
+          <form className="product-form" onSubmit={handleUpdate}>
+            <label>Product Name</label>
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+
+            <label>Product Image URL</label>
+            <input type="text" value={image} onChange={(e) => setImage(e.target.value)} required />
+
+            <label>Product Description</label>
+            <textarea value={desc} onChange={(e) => setDesc(e.target.value)} required />
+
+            <label>Product Price</label>
+            <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} required />
+
+            <label>Category</label>
+            <select value={category} onChange={(e) => setCategory(e.target.value)} required>
+              <option value="">Select category</option>
+              {categories.map((cat) => (
+                <option key={cat.id} value={cat.name}>{cat.name}</option>
+              ))}
+            </select>
+
+            <button type="submit">Update Product</button>
+          </form>
+        </Box>
+      </Modal>
     </div>
   );
 }
